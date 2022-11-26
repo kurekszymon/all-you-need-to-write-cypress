@@ -24,4 +24,4 @@ This resource will also contain some <strong>interactive example as well as some
 ## Introduction
 
 If you are done with all the prerequisites, let's start with real knowledge. 
-[introduction](./1-Introduction/README.md)
+[Start here :)](./1-Introduction/README.md)

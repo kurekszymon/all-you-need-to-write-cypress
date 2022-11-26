@@ -179,4 +179,12 @@ In those test cases we covered `cy.contains` and `cy.type`. We've also used vari
 
 We've used `cy.contains` to target button without specific selector, so it's easier for us to differentiate element by text rather than selector. 
 
-Play around with this test cases, see if you can click some more elements, like hamburger menu or different links :). 
+![Exercise done](photos/code-playground-done.png)
+
+Congratulations! You've written your first cypress test. 
+
+Play around with this test cases, see if you can click some more elements, like hamburger menu or different links. You can try using different assertions, different selectors for elements. 
+
+The more you try on your own, the more you'll remember.
+
+Follow to [chapter 2](../2-Chapter)

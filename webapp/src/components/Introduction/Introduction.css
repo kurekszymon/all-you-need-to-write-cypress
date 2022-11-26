@@ -1,0 +1,24 @@
+.module__introduction {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+  color: white;
+  font-size: 42px;
+
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.module__introduction--text {
+  width: 50%;
+}
+
+.module__introduction--button {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 36px;
+}

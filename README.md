@@ -18,4 +18,10 @@ This resource will also contain some <strong>interactive example as well as some
 - If you want to use a webapp to see how things works, (or to even run cypress locally) you'd have to have [NodeJS](https://nodejs.org/en/) installed on your machine.
 - For your own convenience (at work or at home) I highly suggest using [nvm](https://github.com/nvm-sh/nvm) or [nvm for windows](https://github.com/coreybutler/nvm-windows) in order to work with some different projects. Webapp is written in node v18.12.1, so if nothing changes it should work. I can't promise if it would behave correctly on older versions.
 - Other convenient tool to use while writing Cypress tests is some IDE (integrated development environment), something like [VSCode](https://code.visualstudio.com/) or [IntelliJ JetBrains](https://www.jetbrains.com/help/idea/javascript-specific-guidelines.html)
-- In order to run webapp open your terminal of choice, `cd  webapp/` directory and type `npm start`. This will start local environment to work with.  
+- You can also install [git](https://git-scm.com/downloads) which is version control tool that allow you tracking your changes and store code repositories in many places. (you'll probably learn more about git as you progress with automation testing)
+- In order to run webapp on your machine - open your terminal of choice, and if you haven't already - clone this repo with `git clone https://github.com/kurekszymon/all-you-need-to-write-cypress` and do `cd  all-you-need-to-write-cypress/webapp/` directory and type `npm ci && npm start`. This will start local environment to work with.
+
+## Introduction
+
+If you are done with all the prerequisites, let's start with real knowledge. 
+[introduction](./1-Introduction/README.md)

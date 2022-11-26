@@ -105,18 +105,78 @@ So if there are so many ways to target elements (see [above](#html-tags-css-sele
 Well, it is recommended to go with selector specificity which is used to determine which selector is more important than the other one. 
 
 Basically you should go like this (go down the list if element doesn't have this)
-1. id 
-2. class
-3. attribute
-4. tag
+1. custom cypress attribute (data-cy)
+2. id 
+3. class
+4. attribute
+5. tag
 
 [read more](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)
+
+[cypress docs on it](https://docs.cypress.io/guides/references/best-practices#Selecting-Elements)
 
 ## Code Playground. 
 
 Time for you to see cypress in action!
 
+Start the app by opening terminal in webapp folder and typing `npm start`. 
 
+Open `cypress/e2e` folder. Create `introduction.cy.js` and paste this code block to it. 
 
-## Extracting Logic to Commands.js 
+```js
+describe("cy.click example", function() {
+  before(() => {
+    cy.visit("http://localhost:5173/introduction");
+  });
 
+  it("should get hamburger menu", () => {
+    cy.get("#hamburger-menu"); // selecting by id.
+  });
+
+  it("should get module text", () => {
+    cy.get(".module__introduction--text")
+        .should("contain.text", "cy.get");
+  });
+});
+```
+
+What's happening here..? 
+There are some blocks I wasn't discussing earlier. 
+
+Every test suite is defined by block code `describe`. Describe is a function that expects two parameters - title and function to be executed, containing test cases.
+
+Each test case is defined and distinguished by `it`. And you should setup your testing environment using `before` hook. 
+
+And what about this `.should(...)`? It is basic assertion for cypress tests. Cypress under the hood uses Chai to assert UI state ([read more](https://docs.cypress.io/api/commands/should#Syntax)) and in this case it asserts that element that we grabbed will contain text `cy.get`. If the element won't contain this text, test should fail - You can try that by editing this value. 
+
+Now run the test by typing in terminal (in webapp folder) `npm test` and choosing `introduction.cy.js` from Cypress GUI. 
+
+For now you should see something like this. 
+
+![First test](photos/first-test.png)
+
+To existing test add following test cases
+
+```js
+describe("cy.click example", function() {
+  ...
+
+  it("should click the button", () => {
+    cy.contains("button", "Click me").click();
+    cy.contains("button", "Click me").should("not.exist");
+  });
+
+  it("should fill the input", () => {
+    const message = "My first test";
+    
+    cy.get(".example-input").should("be.visible").type(message);
+    cy.get(".typed-message").should("contain.text", message);
+  });
+});
+```
+
+In those test cases we covered `cy.contains` and `cy.type`. We've also used variable to check if application works correctly given the fact it should display same text that we type to the input. 
+
+We've used `cy.contains` to target button without specific selector, so it's easier for us to differentiate element by text rather than selector. 
+
+Play around with this test cases, see if you can click some more elements, like hamburger menu or different links :). 

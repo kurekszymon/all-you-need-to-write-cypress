@@ -2,7 +2,7 @@
 
 ## Preface 
 
-Working for 2 years in the industry shows me that there are no good <strong>(free)</strong> resources that goes deeper on topics than just copying the documentation part on how to get started. 
+Working for 2 years in the industry showed me that there are no good <strong>(free)</strong> resources that goes deeper on topics than just copying the documentation part on how to get started. 
 
 As I only paid for some udemy courses and most of the knowledge I have was, acquired by reading blog posts, watching youtube videos and experimenting - which are free - I wanted to give something back to the community.
 

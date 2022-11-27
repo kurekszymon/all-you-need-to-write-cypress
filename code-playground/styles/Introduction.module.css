@@ -1,4 +1,4 @@
-.module__introduction {
+.wrapper {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,17 +12,22 @@
   text-align: center;
 }
 
-.module__introduction--text {
+.welcome {
   width: 50%;
+  border: 2px dotted gray;
+  border-radius: 50px;
 }
 
-.module__introduction--button {
+.btnWrapper {
   width: 50%;
   display: flex;
   flex-direction: column;
   font-size: 36px;
 }
 
-.module__introduction input {
+.exampleInput {
+  padding: 2px;
   font-size: 36px;
+  text-align: center;
+  border-radius: 10px;
 }

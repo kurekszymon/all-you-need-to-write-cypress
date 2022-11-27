@@ -56,7 +56,7 @@ Now you can start to interact with it by grabbing it like:
 
 Basic form of interaction with elements is clicking on them. You can do that by chaining commands from get. In example, if we take selector from previous screenshot it should look something like this. 
 
-`cy.get('#hamburger-menu').click()` which would emulate user interaction with this html element. 
+`cy.get('button').click()` would emulate user interaction with button element. 
 
 ![click demo](photos/click-demo.gif)
 <!-- TODO provide better demo, not so flashy -->
@@ -126,14 +126,14 @@ Open `cypress/e2e` folder. Create `introduction.cy.js` and paste this code block
 ```js
 describe("cy.click example", function() {
   before(() => {
-    cy.visit("http://localhost:5173/introduction");
+    cy.visit("http://localhost:3000/introduction");
   });
 
-  it("should get hamburger menu", () => {
-    cy.get("#hamburger-menu"); // selecting by id.
+  it("should get module by id", function() {
+    cy.get("#introduction_wrapper");
   });
 
-  it("should get module text", () => {
+  it("should get module text", function() {
     cy.get(".module__introduction--text")
         .should("contain.text", "cy.get");
   });
@@ -145,7 +145,7 @@ There are some blocks I wasn't discussing earlier.
 
 Every test suite is defined by block code `describe`. Describe is a function that expects two parameters - title and function to be executed, containing test cases.
 
-Each test case is defined and distinguished by `it`. And you should setup your testing environment using `before` hook. 
+Each test case is defined and distinguished by `it`. And you should setup your testing environment using `before` hook. In this example all we need is to just open browser on specific website, so we use `cy.visit()` to emulate user entering URL given as a parameter to this function.
 
 And what about this `.should(...)`? It is basic assertion for cypress tests. Cypress under the hood uses Chai to assert UI state ([read more](https://docs.cypress.io/api/commands/should#Syntax)) and in this case it asserts that element that we grabbed will contain text `cy.get`. If the element won't contain this text, test should fail - You can try that by editing this value. 
 
@@ -161,12 +161,12 @@ To existing test add following test cases
 describe("cy.click example", function() {
   ...
 
-  it("should click the button", () => {
+  it("should click the button", function() {
     cy.contains("button", "Click me").click();
     cy.contains("button", "Click me").should("not.exist");
   });
 
-  it("should fill the input", () => {
+  it("should fill the input", function() {
     const message = "My first test";
     
     cy.get(".example-input").should("be.visible").type(message);
@@ -185,6 +185,6 @@ Congratulations! You've written your first cypress test.
 
 Play around with this test cases, see if you can click some more elements, like hamburger menu or different links. You can try using different assertions, different selectors for elements. 
 
-The more you try on your own, the more you'll remember.
+The more you try on your own, the more you'll remember, and those 5 functions you'll be using the most in your test cases. 
 
 Follow to [chapter 2](../2-Chapter)

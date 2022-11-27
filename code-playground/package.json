@@ -1,0 +1,24 @@
+{
+  "name": "code-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "next dev",
+    "test": "cypress open",
+    "test:headless": "cypress run",
+    "build": "next build",
+    "build:start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "eslint": "8.28.0",
+    "eslint-config-next": "13.0.5",
+    "next": "13.0.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "cypress": "^11.2.0"
+  }
+}

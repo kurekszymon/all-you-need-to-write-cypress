@@ -18,7 +18,7 @@ There are many more reasons, but you are probably not looking for alternatives i
 ## How to setup environment 
 
 After performing steps from [prerequisites](../README.md#prerequisites) you are all set up! 
-Now all you have to do is (if you haven't already) open terminal and type `npx cypress open` which should result in opening this window. ![cypress](photos/npx-cypress-open.png)
+Now all you have to do (if you haven't already) is opening terminal and typing `npm test` which should result in opening this window. ![cypress](photos/npx-cypress-open.png)
 
 Click on E2E Testing. ![e2e testing](photos/npx-e2e-testing.png)
 
@@ -58,7 +58,9 @@ Basic form of interaction with elements is clicking on them. You can do that by 
 
 `cy.get('button').click()` would emulate user interaction with button element. 
 
+
 ![click demo](photos/click-demo.gif)
+
 <!-- TODO provide better demo, not so flashy -->
 
 ### `cy.type`

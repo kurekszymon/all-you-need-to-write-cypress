@@ -167,4 +167,4 @@ Try to write test that uses Cypress.env, custom command and some before hook. My
 
 Experiment and have fun, from now on, it's only javascript knowledge that limits you. (wait until you learn about `cy.task` - magic) 
 
-[Follow for part 3.](3-Intermediate-API)
+[Follow for part 3.](../3-Intermediate-API)

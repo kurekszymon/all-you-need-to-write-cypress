@@ -189,4 +189,4 @@ Play around with this test cases, see if you can click some more elements, like 
 
 The more you try on your own, the more you'll remember, and those 5 functions you'll be using the most in your test cases. 
 
-Follow to [chapter 2](../2-Chapter)
+Follow to [chapter 2](../2-Basics)
